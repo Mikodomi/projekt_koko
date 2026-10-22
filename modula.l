@@ -60,11 +60,11 @@ int keywords(const char* text);
 
 
  /* interger constants INTEGER_CONST */
-<INITIAL>[0-9]+ {return process_token(yytext, "INTEGER_CONST", yytext, INTEGER_CONST);}
+[0-9]+ {return process_token(yytext, "INTEGER_CONST", yytext, INTEGER_CONST);}
 
  /* float constants FLOAT_CONST */
 
-<INITIAL>(([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+))([eE](\+|\-)?[0-9]{1,2})? {return process_token(yytext, "FLOAT_CONST", yytext, REAL_CONST);}
+(([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+))([eE](\+|\-)?[0-9]{1,2})? {return process_token(yytext, "FLOAT_CONST", yytext, REAL_CONST);}
    
 
  /* keywords */
