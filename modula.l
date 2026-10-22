@@ -135,7 +135,7 @@ DOWNTO {return process_token(yytext, "KW_DOWNTO", "", KW_DOWNTO);}
 
 <INITIAL>"*)" { fprintf(stderr, "Comment closed in line %d when none opened\n", yylineno); }
 
-[a-zA-Z][a-zA-Z_$]* { return process_token(yytext, "IDENT", yytext, IDENT); }
+[a-zA-Z][a-zA-Z_$0-9]* { return process_token(yytext, "IDENT", yytext, IDENT); }
 
 
 
